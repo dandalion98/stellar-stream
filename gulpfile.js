@@ -13,6 +13,10 @@ gulp.task('default', function (done) {
     runSequence('env:dev', 'nodemon', done);
 });
 
+gulp.task('prod', function (done) {
+    runSequence('env:prod', 'nodemon', done);
+});
+
 gulp.task('env:dev', function () {
     process.env.NODE_ENV = 'development';
 });
